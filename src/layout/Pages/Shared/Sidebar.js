@@ -16,14 +16,14 @@ const Sidebar = (props) => {
 
     }, [])
     return (
-        <div>
+        <div className='my-5'>
             <h4> Course Names: {courses.length} </h4>
             <div>
                 {
                     courses.map(course => <p key={course.id}>
                        <div >
                        <ListGroup.Item action variant="danger" className='py-2'>
-                       {course.name}
+                        <Link to={`/course/${course.id}`}>{course.name}</Link>
                         </ListGroup.Item>
                        </div>
                         

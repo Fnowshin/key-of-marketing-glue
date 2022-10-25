@@ -1,30 +1,36 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
-import Footer from '../Shared/Footer';
-import Header from '../Shared/Header';
-import Reviews from '../Shared/Reviews';
-import Sidebar from '../Shared/Sidebar';
-import QuestionAccordian from './Components/QuestionAccordian';
-import Slider from './Components/Slider';
+import Carousel from 'react-bootstrap/Carousel'
+import Picture1 from '../Home/images/slider-pic-1.png'
+import Picture2 from '../Home/images/slider-pic-2.png'
+import Picture3 from '../Home/images/slider-pic-3.jpg'
+
 
 const Home = (props) => {
     return (
         <div>
-          <Header></Header>
-          <Container>
-            <Row>
-                <Col lg="4">
-                <Sidebar></Sidebar>
-                </Col>
-                <Col lg="8">
-                <Slider></Slider>
-                </Col>
-            </Row>
-            <Reviews></Reviews>
-            <QuestionAccordian></QuestionAccordian>
-          </Container>
-          <Footer></Footer>
+          <Carousel className='my-5'>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={Picture1}
+                    alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={Picture2}
+                    alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={Picture3}
+                    alt="Third slide"
+                    />
+                </Carousel.Item>
+    </Carousel>
         </div>
     );
 };
