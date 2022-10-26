@@ -12,10 +12,12 @@ const SidebarTopicDetails = (props) => {
                 details.map(detail => <SelectedTopic
                     key = {detail.id }
                     detail ={detail}></SelectedTopic>)
-            }
-
-           
+            } 
+            {
+                
+            }  
         </div>
+        
     );
 };
 

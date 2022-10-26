@@ -4,6 +4,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Button } from 'react-bootstrap';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 
 const Sidebar = (props) => {
@@ -15,9 +19,25 @@ const Sidebar = (props) => {
         .then(data => setCourses(data));
 
     }, [])
+
+    const { providerLogin} = useContext(AuthContext)
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+        .then (result => {
+          const user = result.user;
+          console.log(user);
+        })
+        .catch(error => console.error(error));
+    
+      }
+
     return (
         <div className='my-5'>
             <h4> Course Names: {courses.length} </h4>
+          
             <div>
                 {
                     courses.map(course => <p key={course.id}>
@@ -29,6 +49,10 @@ const Sidebar = (props) => {
                         
                     </p>)
                 }
+            
+                 <div className='my-4 mx-5 px-4'>
+                     <Button onClick={handleGoogleSignIn} variant='outline-danger'> Log In </Button>
+                </div>
             </div>
         </div>
     );
