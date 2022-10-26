@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useContext } from 'react';
-import { Image } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -12,8 +12,13 @@ import { FaUser } from 'react-icons/fa';
 
 
 const Header = (props) => {
-  const { user} = useContext(AuthContext)
+  const { user, logOut} = useContext(AuthContext)
 
+  const handleLogOut = () => {
+    logOut()
+    .then ( () => {})
+    .catch (error => console.error(error))
+  }
 
 
     return (
@@ -32,10 +37,22 @@ const Header = (props) => {
             <Nav className="me-5">
               <Link to="/" className='me-4 main-text'> Home </Link>
               <Link to="/courses" className='me-4 main-text'> Courses </Link>
-              <Link to="/login" className='me-4 main-text'> LogIn </Link>
-              <Link to="/signup" className='me-4 main-text'> Registration  </Link>
-              <p className='me-4 main-text'>{user?.displayName} </p>
-              {user ?
+              
+              <p className='me-4 main-text'>
+                {
+                  user?.uid ?
+                  <>
+                    <span> {user?.displayName} </span>
+                    <Button onClick={handleLogOut} variant='outline-danger' className='mx-2'> Log Out </Button>
+                  </>
+                  :
+                  <>
+                    <Link to="/login" className='me-4 main-text my-2'> LogIn </Link>
+                    <Link to="/signup" className='me-4 main-text my-2'> Registration  </Link>
+                  </>
+                }
+                </p>
+              {user ?.photoURL?
               <Image
               style={{height: '30px'}} roundedCircle src={user.photoURL}
               ></Image>
