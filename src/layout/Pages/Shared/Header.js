@@ -25,17 +25,17 @@ const Header = (props) => {
               src={Logo}
               className="d-inline-block align-top"
             />
-           <Link to="/"> Keys Of Marketing Glue </Link>
+           <Link className='main-text' to="/"> Keys Of Marketing Glue </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className=' justify-content-end'>
             <Nav className="me-5">
-              <Link to="/" className='me-4'> Home </Link>
-              <Link to="/courses" className='me-4'> Courses </Link>
-              <Link to="/login" className='me-4'> LogIn </Link>
-              <Link to="/signup" className='me-4'> Registration  </Link>
-              <p className='me-4'>{user?.displayName} </p>
-              {user.photoURL ?
+              <Link to="/" className='me-4 main-text'> Home </Link>
+              <Link to="/courses" className='me-4 main-text'> Courses </Link>
+              <Link to="/login" className='me-4 main-text'> LogIn </Link>
+              <Link to="/signup" className='me-4 main-text'> Registration  </Link>
+              <p className='me-4 main-text'>{user?.displayName} </p>
+              {user ?
               <Image
               style={{height: '30px'}} roundedCircle src={user.photoURL}
               ></Image>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import ListGroup from 'react-bootstrap/ListGroup';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
@@ -35,6 +35,8 @@ const Sidebar = (props) => {
       }
 
     return (
+        <>
+        <Container>
         <div className='my-5'>
             <h4> Course Names: {courses.length} </h4>
           
@@ -42,19 +44,20 @@ const Sidebar = (props) => {
                 {
                     courses.map(course => <p key={course.id}>
                        <div >
-                       <ListGroup.Item action variant="danger" className='py-2'>
-                        <Link to={`/course/${course.id}`}>{course.name}</Link>
+                       <ListGroup.Item action variant="danger" className='py-2 px-4'>
+                        <Link className='main-text' to={`/course/${course.id}`}>{course.name}</Link>
                         </ListGroup.Item>
                        </div>
                         
                     </p>)
                 }
-            
-                 <div className='my-4 mx-5 px-4'>
-                     <Button onClick={handleGoogleSignIn} variant='outline-danger'> Log In </Button>
-                </div>
+                 <ListGroup.Item action variant="danger"className='py-2 px-4' >
+                     <Link className='main-text' onClick={handleGoogleSignIn} variant='outline-danger'> Log In </Link>
+                     </ListGroup.Item>
             </div>
         </div>
+        </Container>
+        </>
     );
 };
 
