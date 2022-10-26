@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image'
 
 const ShortDetails = ({topic}) => {
-    const { name, image} = topic;
+    const { name, image, details} = topic;
     return (
        <div>
             <Card className='my-4 border-warning'>
@@ -12,6 +12,7 @@ const ShortDetails = ({topic}) => {
                 <Card.Title>
                     {name}
                 </Card.Title>
+                <p>{details}</p>
                 </Card.Body>
             </Card>
        </div>
