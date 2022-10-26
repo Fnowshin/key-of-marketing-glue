@@ -1,21 +1,44 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Footer from '../Shared/Footer';
-import Header from '../Shared/Header';
 import Sidebar from '../Shared/Sidebar';
 
+import { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
+
 const SelectedTopic = ({detail}) => {
-    const {image, name, _details} = detail 
+    const componentRef = useRef();
+    const handleDownload = useReactToPrint({
+        content: () =>componentRef.current,
+        documentTitle: 'course-details',
+        onAfterPrint: () => alert('Document Downloaded')
+    })
+
+    
+    const {image, name, _details} = detail;
+
+ 
     return (
-        <div>
-           
+        <>       
             <Container>
                 <Row>
                     <Col lg='9'>
-                        <div className='text-center my-4'><h2 className='text-danger'> {name} </h2>
-                        </div>
+                        <Row>
+                            <Col>
+                            <Button className='my-5' onClick={handleDownload} variant='warning'> Download PDF </Button>
+                            <div ref={componentRef} 
+                            >
+                            </div>
+                            </Col>
+                            <Col>
+                            <div className='text-center my-4'>
+                                <h2 className='text-danger'> {name} </h2>
+                            </div>
+                            </Col>
+                        </Row>
+                        
                     </Col>
                     <Col lg='3' className='text-center my-4'>
                         <div className='m-3'>
@@ -44,7 +67,7 @@ const SelectedTopic = ({detail}) => {
                 </Row>
                 <Footer></Footer>
             </Container>
-        </div>
+        </>
     );
 };
 

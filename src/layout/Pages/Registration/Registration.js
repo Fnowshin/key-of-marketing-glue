@@ -25,7 +25,7 @@ const Registration = (props) => {
             const user = result.user;
             console.log(user);
             // setError('');
-            // form.reset();
+            form.reset();
             // handleUpdateUserProfile(name, photoURL);
             // handleEmailVerification();
             // toast.success('Please verify your email address.')
@@ -62,23 +62,23 @@ const Registration = (props) => {
         <div>
              <Container className='login-page'>
            <Form onSubmit={handleRegister}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" >
                     <Form.Label> Name </Form.Label>
                     <Form.Control name='name' type="text" placeholder="First Name" />
                    
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" >
                     <Form.Label> Photo URL </Form.Label>
                     <Form.Control name='photoURL' type="email" placeholder="Photo URL" />
                    
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" >
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" required />
                    
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" >
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" required />
                 </Form.Group>
