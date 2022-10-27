@@ -14,7 +14,7 @@ const Sidebar = (props) => {
     const [courses, setCourses] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:7000/course-topics')
+        fetch('https://marketing-topic-server.vercel.app/course-topics')
         .then( res => res.json())
         .then(data => setCourses(data));
 
@@ -38,7 +38,6 @@ const Sidebar = (props) => {
         <>
         <Container>
         <div className='my-5'>
-            <h4> Course Names: {courses.length} </h4>
           
             <div>
                 {

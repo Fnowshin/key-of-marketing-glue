@@ -7,7 +7,6 @@ const Courses = (props) => {
     const topics = useLoaderData();
     return (
        <div className='my-5'>
-            <h2> You Can Enroll: {topics.length} courses </h2>
             {
                 topics.map(topic => <ShortDetails
                     key = {topic.id }

@@ -25,7 +25,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:7000/topics') 
+                loader: () => fetch('https://marketing-topic-server.vercel.app/topics') 
              },
             
              {
@@ -48,7 +48,7 @@ export const routes = createBrowserRouter([
     {
         path: '/course/:id',
         element: <SidebarTopicDetails></SidebarTopicDetails>,
-        loader: ({params}) => fetch(`http://localhost:7000/course/${params.id}`)
+        loader: ({params}) => fetch(`https://marketing-topic-server.vercel.app/course/${params.id}`)
     },
     {
         path: '/details/:id',

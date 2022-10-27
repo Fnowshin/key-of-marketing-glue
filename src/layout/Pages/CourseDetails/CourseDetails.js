@@ -9,7 +9,7 @@ const CourseDetails = (props) => {
     const [details, setDetails ] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:7000/details/${details._id}`)
+        fetch(`https://marketing-topic-server.vercel.app/details/${details._id}`)
         .then ( res => res.json())
         .then (data => setDetails(data));
 
