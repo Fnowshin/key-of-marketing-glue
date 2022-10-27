@@ -1,5 +1,5 @@
 ## Name of the site: Key Of Marketing Glue
-<br>
+
 * Live Site: https://marketing-courses-4f09f.web.app
 
 ## Link Of The Repository 
@@ -7,15 +7,15 @@ https://github.com/programming-hero-web-course1/b610-learning-platform-client-si
 
 
 ### Installed Applications
-<br>
- *React-Router-Dom
+
+ * React-Router-Dom
  <br>
- *React-Bootstrap
+ * React-Bootstrap
  <br>
- *React-Icons
+ * React-Icons
  <br>
- *React-To-Print
+ * React-To-Print
  <br>
- *Firebase for Authentication & Deploy 
+ * Firebase for Authentication & Deploy 
 
 

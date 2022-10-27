@@ -61,7 +61,6 @@ const Header = (props) => {
               ></Image>
             : <FaUser></FaUser>}    
             </Nav>
-
             <div className='d-lg-none'>
               <Sidebar></Sidebar>
             </div>
