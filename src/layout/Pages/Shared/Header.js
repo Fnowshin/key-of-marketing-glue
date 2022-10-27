@@ -37,8 +37,8 @@ const Header = (props) => {
             <Nav className="me-5">
               <Link to="/" className='me-4 main-text'> Home </Link>
               <Link to="/courses" className='me-4 main-text'> Courses </Link>
-              <Link to="/courses" className='me-4 main-text'> Blog </Link>
-              <Link to="/courses" className='me-4 main-text'> FAQ </Link>
+              <Link to="/blog" className='me-4 main-text'> Blog </Link>
+              <Link to="/faq" className='me-4 main-text'> FAQ </Link>
               
               <p className='me-4 main-text'>
                 {

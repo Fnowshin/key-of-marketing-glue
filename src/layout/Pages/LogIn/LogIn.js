@@ -16,7 +16,7 @@ import app from '../../../firebase/firebase.config';
 
 const LogIn = (props) => {
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn, providerLogin} = useContext(AuthContext)
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -37,7 +37,7 @@ const LogIn = (props) => {
      .catch(error => console.error(error))
     }
 
-    const { providerLogin} = useContext(AuthContext)
+    // const { providerLogin} = useContext(AuthContext)
 
     const googleProvider = new GoogleAuthProvider();
     
@@ -50,7 +50,7 @@ const LogIn = (props) => {
         .then (result => {
           const user = result.user;
           console.log(user);
-          navigate('/courses')
+        //   navigate(from, {replace: true})
         })
         .catch(error => console.error(error));
     
@@ -61,7 +61,7 @@ const LogIn = (props) => {
         .then (result => {
             const user =result.user;
             console.log(user);
-            navigate('/courses')
+            navigate(from, {replace: true})
         })
         .catch(error => console.error(error));
       }
