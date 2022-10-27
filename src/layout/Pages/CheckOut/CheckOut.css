@@ -1,0 +1,8 @@
+.checkout{
+    text-align: center;
+    border: 2px solid rgb(255, 153, 0);
+    border-radius: 10px;
+    margin: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}

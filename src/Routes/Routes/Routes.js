@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import CheckOut from "../../layout/Pages/CheckOut/CheckOut";
 import CourseDetails from "../../layout/Pages/CourseDetails/CourseDetails";
 
 import Courses from "../../layout/Pages/Courses";
@@ -7,6 +8,7 @@ import Home from "../../layout/Pages/Home/Home";
 import LogIn from "../../layout/Pages/LogIn/LogIn";
 import Registration from "../../layout/Pages/Registration/Registration";
 import SidebarTopicDetails from "../../layout/Pages/SidebarTopicDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const routes = createBrowserRouter([
@@ -31,8 +33,8 @@ export const routes = createBrowserRouter([
              {
                 path: '/login',
                 element: <LogIn></LogIn>
-             },   
-
+             },
+             
         ]
            
     },
@@ -45,7 +47,12 @@ export const routes = createBrowserRouter([
         path: '/details/:id',
         element: <CourseDetails></CourseDetails>,
         
-    }
+    }, 
+    {
+        path:'/checkout',
+        element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>
+    }   
+
    
    
    

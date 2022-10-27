@@ -1,11 +1,13 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
 const Footer = (props) => {
     return (
-        <Card className="text-center">
+        
+          <Card className="text-center">
         
         <Card.Body>
           <Card.Title>Special title treatment</Card.Title>
@@ -16,6 +18,7 @@ const Footer = (props) => {
         </Card.Body>
         
       </Card>
+        
     );
 };
 

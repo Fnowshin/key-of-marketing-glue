@@ -37,8 +37,9 @@ const SelectedTopic = ({detail}) => {
                                 <h2 className='text-danger'> {name} </h2>
                             </div>
                             </Col>
+                
                         </Row>
-                        
+            
                     </Col>
                     <Col lg='3' className='text-center my-4'>
                         <div className='m-3'>
@@ -65,8 +66,12 @@ const SelectedTopic = ({detail}) => {
                     </Card>
                     </Col>
                 </Row>
-                <Footer></Footer>
+                <div className='mb-5'>
+                <Button variant='warning'><Link to='/checkout'>
+                        Get Premium Acces</Link> </Button>
+                </div>
             </Container>
+            <Footer></Footer>
         </>
     );
 };

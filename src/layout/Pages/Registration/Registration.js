@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Registration = (props) => {
@@ -90,6 +91,9 @@ const Registration = (props) => {
                     Your Information is Safe!
                     </Form.Text>
             </Form>
+            <div className='mt-5'>
+                <p> You Have Account Already? <Link to='/login'>Log In Here  </Link></p>
+            </div>
             </Container>
         </div>
     );
