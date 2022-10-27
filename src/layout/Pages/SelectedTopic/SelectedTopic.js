@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, Button, Col, Container, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link, useLoaderData } from 'react-router-dom';
-import Footer from '../Shared/Footer';
+
 import Sidebar from '../Shared/Sidebar';
 
 import { useRef } from 'react';
@@ -71,7 +71,7 @@ const SelectedTopic = ({detail}) => {
                         Get Premium Acces</Link> </Button>
                 </div>
             </Container>
-            <Footer></Footer>
+            
         </>
     );
 };

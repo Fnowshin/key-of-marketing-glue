@@ -3,7 +3,6 @@ import { Container, Image } from 'react-bootstrap';
 import Header from '../Shared/Header';
 import { BsFillEmojiSunglassesFill } from "react-icons/bs";
 import { FaUser } from 'react-icons/fa';
-import Footer from '../Shared/Footer';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import './CheckOut.css'
