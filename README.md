@@ -5,14 +5,17 @@
 ## Link Of The Repository 
 https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Fnowshin
 
-* I used React-bootstrap and vanilla CSS in this Project.
 
 ### Installed Applications
 <br>
- React-Router-Dom
- React-Bootstrap
- React-Icons
- React-To-Print
- Firebase for Authentication & Deploy 
+ *React-Router-Dom
+ <br>
+ *React-Bootstrap
+ <br>
+ *React-Icons
+ <br>
+ *React-To-Print
+ <br>
+ *Firebase for Authentication & Deploy 
 
 
