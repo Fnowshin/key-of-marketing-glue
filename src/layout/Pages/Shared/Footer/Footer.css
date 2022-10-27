@@ -1,0 +1,13 @@
+.footer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 183, 82);
+    margin-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+.book{
+    font-size: 30px;
+    margin: 10px;
+}

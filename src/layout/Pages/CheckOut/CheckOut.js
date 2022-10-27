@@ -6,6 +6,7 @@ import { FaUser } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import './CheckOut.css'
+import Footer from '../Shared/Footer/Footer';
 
 
 const CheckOut = (props) => {
@@ -33,7 +34,7 @@ const CheckOut = (props) => {
               
                 </div>
             </Container>
-            
+            <Footer></Footer>
         </div>
     );
 };
