@@ -63,7 +63,6 @@ const Header = (props) => {
             </Nav>
 
             <div className='d-lg-none'>
-              <h5> Courses </h5>
               <Sidebar></Sidebar>
             </div>
           </Navbar.Collapse>
