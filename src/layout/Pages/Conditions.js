@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import Footer from './Shared/Footer';
+
 import Header from './Shared/Header';
 
 const Conditions = (props) => {
