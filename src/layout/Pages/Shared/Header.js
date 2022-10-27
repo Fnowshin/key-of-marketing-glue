@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import Logo from '../Home/images/logo-image.jpeg'
 import { FaUser } from 'react-icons/fa';
+import Sidebar from './Sidebar';
 
 
 const Header = (props) => {
@@ -58,10 +59,13 @@ const Header = (props) => {
               <Image
               style={{height: '30px'}} roundedCircle src={user.photoURL}
               ></Image>
-            : <FaUser></FaUser>}
-              
-               
+            : <FaUser></FaUser>}    
             </Nav>
+
+            <div className='d-lg-none'>
+              <h5> Courses </h5>
+              <Sidebar></Sidebar>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

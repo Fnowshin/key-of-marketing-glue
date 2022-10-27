@@ -13,7 +13,7 @@ const Main = (props) => {
             <Header></Header>
             <Container>
                 <Row>
-                   <Col lg="3">
+                   <Col lg="3 d-none d-lg-block">
                    <Sidebar></Sidebar>
                    </Col>
                     <Col lg="9">
